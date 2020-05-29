@@ -5,4 +5,9 @@ set( GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE )
 
 add_subdirectory( glfw )
 
-set( GLAD_CPP "${CMAKE_CURRENT_SOURCE_DIR}/glad.c" PARENT_SCOPE )
+set( 
+    OTHER_CPP 
+        "${CMAKE_CURRENT_SOURCE_DIR}/glad.c" 
+        "${CMAKE_CURRENT_SOURCE_DIR}/ShaderProgram.cpp" 
+        PARENT_SCOPE
+)

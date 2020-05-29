@@ -16,3 +16,4 @@ add_subdirectory( other )
 
 add_subdirectory( window )
 add_subdirectory( square-1 )
+add_subdirectory( shader )
