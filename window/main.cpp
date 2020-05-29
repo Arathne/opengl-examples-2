@@ -8,6 +8,8 @@ void processInput( GLFWwindow* window );
 
 int main (int argc, char** argv)
 {
+    std::cout << "an empty window" << std::endl;
+    
     glfwInit();
     glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 3 );
     glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 3 );

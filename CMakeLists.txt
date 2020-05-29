@@ -15,5 +15,6 @@ include_directories( include )
 add_subdirectory( other )
 
 add_subdirectory( window )
-add_subdirectory( square-1 )
 add_subdirectory( shader )
+add_subdirectory( square-1 )
+add_subdirectory( square-2 )
