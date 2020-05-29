@@ -34,20 +34,9 @@ int main()
     glViewport( 0, 0, 600, 600 );
     glfwSetFramebufferSizeCallback( window, resize );
     
-    unsigned int shaderProgram;
-    Shader vertexShader( GL_VERTEX_SHADER, VERTEX_SHADER_PATH );
-    Shader fragmentShader( GL_FRAGMENT_SHADER, FRAGMENT_SHADER_PATH );
-    shaderProgram = glCreateProgram();
+    ShaderProgram shaderProgram( VERTEX_SHADER_PATH, FRAGMENT_SHADER_PATH );
+    shaderProgram.link();
 
-    vertexShader.compile();
-    fragmentShader.compile();
-    
-    vertexShader.attach( shaderProgram );
-    fragmentShader.attach( shaderProgram );
-
-    glLinkProgram( shaderProgram );
-    glUseProgram( shaderProgram );
-    
     float vertices[] = {
         -0.5f, -0.5f, 0.0f,
          0.5f, -0.5f, 0.0f,
@@ -72,7 +61,8 @@ int main()
         glClearColor( 0.2f, 0.3f, 0.3f, 1.0f );
         glClear( GL_COLOR_BUFFER_BIT );
         
-        glUseProgram( shaderProgram );
+        shaderProgram.use();
+        
         glBindVertexArray(VAO);
         glDrawArrays( GL_TRIANGLES, 0, 3 );
 
@@ -80,7 +70,10 @@ int main()
         glfwPollEvents();
     }
     
+    glDeleteVertexArrays( 1, &VAO );
+    glDeleteBuffers( 1, &VBO );
     glfwTerminate();
+    
     return 0;
 }
 
