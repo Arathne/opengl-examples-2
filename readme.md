@@ -1,4 +1,4 @@
-INSTRUCTIONS:
+### INSTRUCTIONS:
 
-git submodule init
-git submodule update
+#### git submodule init
+#### git submodule update

@@ -13,4 +13,6 @@ find_package( OpenGL REQUIRED )
 
 include_directories( include )
 add_subdirectory( other )
-add_subdirectory( basic )
+
+add_subdirectory( window )
+add_subdirectory( square-1 )
