@@ -11,6 +11,7 @@ bool wireframeMode = false;
 int main()
 {
     std::cout << "changes between fill and wireframe mode" << std::endl;
+    std::cout << "CHANGE MODE = ENTER" << std::endl;
 
     glfwInit();
     glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 3 );
