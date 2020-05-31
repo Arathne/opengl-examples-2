@@ -21,8 +21,8 @@ const char* fragmentShaderSource = "#version 330 core\n"
 
 int main (int argc, char** argv)
 {
-    std::cout << "single Vertex Array Object, Vertex Buffer Object, and Element Buffer Object with shaders hard coded into the program" << std::endl;
-
+    std::cout << "single vertex array bbject, vertex buffer object, and element buffer object with shaders hard coded into the program" << std::endl;
+    
     glfwInit();
     glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 3 );
     glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 3 );

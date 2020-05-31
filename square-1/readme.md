@@ -1,1 +1,1 @@
-### single Vertex Array Object, Vertex Buffer Object, and Element Buffer Object with shaders hard coded into the program
+### single vertex array bbject, vertex buffer object, and element buffer object with shaders hard coded into the program
