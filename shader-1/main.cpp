@@ -17,7 +17,7 @@ int main()
     glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 3 );
     glfwWindowHint( GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE );
 
-    GLFWwindow* window = glfwCreateWindow( 600, 600, "shader", nullptr, nullptr );
+    GLFWwindow* window = glfwCreateWindow( 600, 600, "shader-1", nullptr, nullptr );
     if( window == nullptr )
     {
         glfwTerminate();

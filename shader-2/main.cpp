@@ -8,14 +8,14 @@ void processInput( GLFWwindow* window );
 
 int main()
 {
-    std::cout << "two vertex array objects with different buffers" << std::endl;
+    std::cout << "two different shaders for two different triangles" << std::endl;
 
     glfwInit();
     glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 3 );
     glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 3 );
     glfwWindowHint( GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE );
 
-    GLFWwindow* window = glfwCreateWindow( 600, 600, "square-3", nullptr, nullptr );
+    GLFWwindow* window = glfwCreateWindow( 600, 600, "shader-2", nullptr, nullptr );
     if( window == nullptr )
     {
         std::cout << "Failed to create glfw window" << std::endl;
@@ -24,28 +24,31 @@ int main()
     }
 
     glfwMakeContextCurrent( window );
-    if( !gladLoadGLLoader( (GLADloadproc)glfwGetProcAddress ))
+    if( !gladLoadGLLoader( (GLADloadproc)glfwGetProcAddress ) )
     {
         std::cout << "Failed to initialize GLAD" << std::endl;
+        glfwTerminate();
         return -1;
     }
-
+    
     glViewport( 0, 0, 600, 600 );
     glfwSetFramebufferSizeCallback( window, resize );
     
-    ShaderProgram shaderProgram( VERTEX_SHADER_PATH, FRAGMENT_SHADER_PATH );
-    shaderProgram.link();
+    ShaderProgram shaderProgram1( VERTEX_SHADER_PATH, FRAGMENT_SHADER_PATH );
+    ShaderProgram shaderProgram2( VERTEX_SHADER_PATH, FRAGMENT2_SHADER_PATH );
+    shaderProgram1.link();
+    shaderProgram2.link();
     
     float triangle1[] = {
-        -0.5f, -0.5f, 0.0f,
-        -0.5f,  0.5f, 0.0f,
-         0.5f, -0.5f, 0.0f
+       -0.5f, -0.5f,  0.0f,
+       -0.5f,  0.5f,  0.0f,
+        0.5f, -0.5f,  0.0f
     };
-    
+
     float triangle2[] = {
-         0.5f, -0.5f, 0.0f,
-         0.5f,  0.5f, 0.0f,
-        -0.5f,  0.5f, 0.0f
+        0.5f, -0.5f,  0.0f,
+        0.5f,  0.5f,  0.0f,
+       -0.5f,  0.5f,  0.0f
     };
 
     unsigned int VAO[2];
@@ -66,28 +69,29 @@ int main()
     glVertexAttribPointer( 0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(float), (void*) 0 );
     glEnableVertexAttribArray( 0 );
     
-    while( !glfwWindowShouldClose(window) )
+    while( !glfwWindowShouldClose( window ) )
     {
         processInput( window );
 
         glClearColor( 0.2f, 0.3f, 0.3f, 1.0f );
         glClear( GL_COLOR_BUFFER_BIT );
 
-        shaderProgram.use();
-
+        shaderProgram1.use();
         glBindVertexArray( VAO[0] );
         glDrawArrays( GL_TRIANGLES, 0, 3 );
         
+        shaderProgram2.use();
         glBindVertexArray( VAO[1] );
         glDrawArrays( GL_TRIANGLES, 0, 3 );
-        
+
         glfwSwapBuffers( window );
         glfwPollEvents();
     }
-    
+
     glDeleteVertexArrays( 2, VAO );
     glDeleteBuffers( 2, VBO );
     glfwTerminate();
+
     return 0;
 }
 
