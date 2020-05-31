@@ -12,6 +12,7 @@ class ShaderProgram
         unsigned int programID;
         Shader* vertexShader;
         Shader* fragmentShader;
+        int currentUniform;
 
         ShaderProgram (void);
 
