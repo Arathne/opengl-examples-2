@@ -48,6 +48,12 @@ bool ShaderProgram::getUniform (std::string name)
     return success;
 }
 
+void ShaderProgram::setUniform1f (float value) const
+{
+    ShaderProgram::use();
+    glUniform1f( currentUniform, value );
+}
+
 void ShaderProgram::setUniform4f (float x, float y, float z, float a) const
 {
     ShaderProgram::use();
