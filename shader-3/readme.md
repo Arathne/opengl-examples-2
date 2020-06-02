@@ -1,1 +1,1 @@
-### uniform in shader
+### shader flips triangle
