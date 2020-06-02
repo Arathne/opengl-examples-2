@@ -22,6 +22,9 @@ class ShaderProgram
         
         void link (void) const;
         void use (void) const;
+        
+        bool getUniform (std::string name);
+        void setUniform4f (float x, float y, float z, float a) const;
 };
 
 #endif
