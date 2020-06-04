@@ -22,6 +22,7 @@ add_subdirectory( color )
 add_subdirectory( shader-1 )
 add_subdirectory( shader-2 )
 add_subdirectory( shader-3 )
+add_subdirectory( shader-4 )
 
 add_subdirectory( uniform-1 )
 add_subdirectory( uniform-2 )
