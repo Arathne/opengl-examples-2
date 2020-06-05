@@ -12,3 +12,5 @@ set(
         "${CMAKE_CURRENT_SOURCE_DIR}/Shader.cpp" 
         PARENT_SCOPE
 )
+
+set( TEXTURE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/textures" PARENT_SCOPE )
