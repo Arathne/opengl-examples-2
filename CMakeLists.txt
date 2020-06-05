@@ -19,6 +19,8 @@ add_subdirectory( window )
 add_subdirectory( wireframe )
 add_subdirectory( color )
 
+add_subdirectory( texture-1 )
+
 add_subdirectory( shader-1 )
 add_subdirectory( shader-2 )
 add_subdirectory( shader-3 )

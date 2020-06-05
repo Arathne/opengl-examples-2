@@ -1,0 +1,11 @@
+#version 330 core
+out vec4 color;
+
+uniform sampler2D FragmentTexture;
+in vec3 FragmentColor;
+in vec2 FragmentTexCoord;
+
+void main()
+{
+    color = vec4( FragmentColor.xyz, 1.0f ) * texture( FragmentTexture, FragmentTexCoord );
+}
