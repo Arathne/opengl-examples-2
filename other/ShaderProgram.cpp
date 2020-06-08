@@ -59,3 +59,8 @@ void ShaderProgram::setUniform4f (float x, float y, float z, float a) const
     ShaderProgram::use();
     glUniform4f( currentUniform, x, y, z, a );
 }
+
+void ShaderProgram::setUniform1i (int value) const
+{
+    glUniform1i( currentUniform, value );
+}

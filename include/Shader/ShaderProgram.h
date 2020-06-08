@@ -26,6 +26,8 @@ class ShaderProgram
         bool getUniform (std::string name);
         void setUniform1f (float value) const;
         void setUniform4f (float x, float y, float z, float a) const;
+        void setUniform1i (int value) const;
+
 };
 
 #endif
