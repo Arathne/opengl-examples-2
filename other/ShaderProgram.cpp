@@ -64,3 +64,8 @@ void ShaderProgram::setUniform1i (int value) const
 {
     glUniform1i( currentUniform, value );
 }
+
+void ShaderProgram::setUniformMat4fv (glm::mat4 matrix) const
+{
+    glUniformMatrix4fv( currentUniform, 1, GL_FALSE, glm::value_ptr(matrix) );
+}

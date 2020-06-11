@@ -6,6 +6,10 @@
 #include <Shader/Shader.h>
 #include <string>
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 class ShaderProgram
 {
     private:
@@ -27,7 +31,7 @@ class ShaderProgram
         void setUniform1f (float value) const;
         void setUniform4f (float x, float y, float z, float a) const;
         void setUniform1i (int value) const;
-
+        void setUniformMat4fv (glm::mat4 matrix) const;
 };
 
 #endif
