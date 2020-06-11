@@ -17,6 +17,8 @@ Texture::~Texture (void)
 {
     if( data == nullptr )
         delete[] data;
+
+    glDeleteTextures( 1, &id );
 }
 
 void Texture::load (unsigned int image_rgb, unsigned int opengl_rgb) const
