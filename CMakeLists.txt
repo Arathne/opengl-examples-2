@@ -14,7 +14,6 @@ find_package( OpenGL REQUIRED )
 include_directories( include )
 add_subdirectory( other )
 
-
 add_subdirectory( window )
 add_subdirectory( wireframe )
 add_subdirectory( color )
@@ -39,3 +38,4 @@ add_subdirectory( square-2 )
 add_subdirectory( square-3 )
 
 add_subdirectory( transform-1 )
+add_subdirectory( transform-2 )
