@@ -39,3 +39,4 @@ add_subdirectory( square-3 )
 
 add_subdirectory( transform-1 )
 add_subdirectory( transform-2 )
+add_subdirectory( transform-3 )
