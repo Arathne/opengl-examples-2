@@ -31,6 +31,7 @@ class ShaderProgram
         void setUniform1f (float value) const;
         void setUniform4f (float x, float y, float z, float a) const;
         void setUniform1i (int value) const;
+        void setUniform1i (std::string name, int value);
         void setUniformMat4fv (glm::mat4 matrix) const;
         void setUniformMat4fv (std::string name, glm::mat4 matrix);
 };
