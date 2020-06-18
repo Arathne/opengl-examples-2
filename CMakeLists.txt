@@ -44,3 +44,4 @@ add_subdirectory( transform-4 )
 
 add_subdirectory( camera-1 )
 add_subdirectory( camera-2 )
+add_subdirectory( camera-3 )
