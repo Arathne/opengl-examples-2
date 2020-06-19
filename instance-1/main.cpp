@@ -11,6 +11,8 @@ void key_callback( GLFWwindow* window, int key, int scancode, int action, int mo
 
 int main()
 {
+    std::cout << "1 draw call for multiple squares" << std::endl;
+
     glfwInit();
     glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 3 );
     glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 3 );
