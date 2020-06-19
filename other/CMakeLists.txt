@@ -10,6 +10,7 @@ set(
         "${CMAKE_CURRENT_SOURCE_DIR}/glad.c" 
         "${CMAKE_CURRENT_SOURCE_DIR}/ShaderProgram.cpp" 
         "${CMAKE_CURRENT_SOURCE_DIR}/Shader.cpp" 
+        "${CMAKE_CURRENT_SOURCE_DIR}/Camera.cpp"
         PARENT_SCOPE
 )
 
