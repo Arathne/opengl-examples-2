@@ -48,3 +48,4 @@ add_subdirectory( camera-3 )
 add_subdirectory( camera-4 )
 
 add_subdirectory( instance-1 )
+add_subdirectory( instance-2 )
