@@ -34,6 +34,7 @@ class ShaderProgram
         void setUniform1i (std::string name, int value);
         void setUniformMat4fv (glm::mat4 matrix) const;
         void setUniformMat4fv (std::string name, glm::mat4 matrix);
+        void setUniformVec2fv (glm::vec2 vector, int count) const;
 };
 
 #endif

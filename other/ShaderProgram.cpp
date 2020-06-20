@@ -81,3 +81,8 @@ void ShaderProgram::setUniformMat4fv (std::string name, glm::mat4 matrix)
     ShaderProgram::getUniform( name );
     ShaderProgram::setUniformMat4fv( matrix );
 }
+
+void ShaderProgram::setUniformVec2fv (glm::vec2 vector, int count) const
+{
+    glUniform2fv( currentUniform, count, glm::value_ptr(vector) );
+}
